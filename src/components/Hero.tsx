@@ -12,7 +12,7 @@ export const Hero = () => {
   const isLightMode = theme === "light"
 
   // Use public directory paths for logos
-  const logoSrc = isLightMode ? "/assets/Amane logo.svg" : "/assets/Amane logo white.svg"
+  const logoSrc = isLightMode ? "public/assets/Amane logo.svg" : "public/assets/Amane logo white.svg"
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center py-20">

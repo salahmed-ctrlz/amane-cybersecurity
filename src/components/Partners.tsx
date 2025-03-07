@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { useTranslation } from "../hooks/useLanguage"
 import { GlassCard } from "./GlassCard"
@@ -10,23 +8,23 @@ export const Partners = () => {
   const partners = [
     {
       name: "Sonatrach",
-      logo: "/assets/Sonatrach.png", // Using Amane logo as placeholder for Sonatrach
+      logo: "public/assets/Sonatrach.png", // Using Amane logo as placeholder for Sonatrach
     },
     {
       name: "Université Badji Mokhtar Annaba",
-      logo: "/assets/badjimokhtarannaba.png",
+      logo: "public/assets/badjimokhtarannaba.png",
     },
     {
       name: "Google Cloud",
-      logo: "/assets/Google-Cloud-Symbol.png",
+      logo: "public/assets/Google-Cloud-Symbol.png",
     },
     {
       name: "Algérie Télécom",
-      logo: "/assets/Logo_Algérie_Télécom.svg",
+      logo: "public/assets/Logo_Algérie_Télécom.svg",
     },
     {
       name: "Ooredoo",
-      logo: "/assets/Ooredoo.png", // Using Amane logo as placeholder for Ooredoo
+      logo: "public/assets/Ooredoo.png", // Using Amane logo as placeholder for Ooredoo
     },
   ]
 

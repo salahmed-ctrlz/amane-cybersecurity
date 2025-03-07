@@ -16,7 +16,7 @@ export const Founder = () => {
           >
             <motion.img
               whileHover={{ scale: 1.05 }}
-              src="/assets/salaheddinemedkour.jpg"
+              src="public/assets/salaheddinemedkour.jpg"
               alt="Medkour Salah Eddine"
               className="w-48 h-48 rounded-full object-cover border-4 border-purple-500/30"
             />
