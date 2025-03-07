@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "types": ["three"],
+    "baseUrl": ".",
+    "paths": {
+      "three/*": ["node_modules/three/*"]
+    },
+    "jsx": "react-jsx",  // Ensures JSX is supported
+    "composite": true
+  },
+  "include": [
+    "src/**/*",
+    "node_modules/@types/three"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

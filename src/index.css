@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inclusive+Sans&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap');
+
+/* TailwindCSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inclusive Sans', sans-serif;
+  }
+
+  .font-heading {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  .font-arabic {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+  }
+
+  [dir="rtl"] {
+    font-family: 'Noto Kufi Arabic', sans-serif; /* Use Noto Kufi Arabic for RTL content */
+  }
+  /* General styling for right-to-left */
+  .rtl-text {
+    direction: rtl; /* Right to left direction */
+    text-align: right; /* Align text to the right */
+  }
+
+  .ltr-text {
+    direction: ltr; /* Left to right direction */
+    text-align: left; /* Align text to the left */
+  }
+}
+
+/* Dark Mode Settings */
+body.dark {
+  background-color: #1a202c; /* Dark background */
+  color: white;
+}
+
+/* Light Mode Settings */
+body {
+  background-color: #f9fafb; /* Light background */
+  color: black;
+}
