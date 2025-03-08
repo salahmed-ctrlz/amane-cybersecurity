@@ -8,28 +8,28 @@ export const Partners = () => {
   const partners = [
     {
       name: "Sonatrach",
-      logo: "public/assets/Sonatrach.png", // Using Amane logo as placeholder for Sonatrach
+      logo: "./assets/Sonatrach.png", // Using Amane logo as placeholder for Sonatrach
     },
     {
       name: "Université Badji Mokhtar Annaba",
-      logo: "public/assets/badjimokhtarannaba.png",
+      logo: "./assets/badjimokhtarannaba.png",
     },
     {
       name: "Google Cloud",
-      logo: "public/assets/Google-Cloud-Symbol.png",
+      logo: "./assets/Google-Cloud-Symbol.png",
     },
     {
       name: "Algérie Télécom",
-      logo: "public/assets/Logo_Algérie_Télécom.svg",
+      logo: "./assets/Logo_Algérie_Télécom.svg",
     },
     {
       name: "Ooredoo",
-      logo: "public/assets/Ooredoo.png", // Using Amane logo as placeholder for Ooredoo
+      logo: "./assets/Ooredoo.png", // Using Amane logo as placeholder for Ooredoo
     },
   ]
 
   return (
-    <section id="partners" className="py-20">
+    <section id="partners" className="py-20 font-arabic">
       <GlassCard className="p-8 md:p-12">
         <motion.h2
           initial={{ opacity: 0 }}

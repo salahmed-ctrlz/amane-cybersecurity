@@ -15,6 +15,13 @@
     font-family: 'Inclusive Sans', sans-serif;
   }
 
+  /* Apply Arabic font to all text when body has font-arabic class */
+  body.font-arabic * {
+    font-family: 'Noto Kufi Arabic', sans-serif !important;
+  }
+  
+
+  /* These classes can still be used for specific elements if needed */
   .font-heading {
     font-family: 'Bebas Neue', sans-serif;
   }
@@ -23,18 +30,15 @@
     font-family: 'Noto Kufi Arabic', sans-serif;
   }
 
-  [dir="rtl"] {
-    font-family: 'Noto Kufi Arabic', sans-serif; /* Use Noto Kufi Arabic for RTL content */
-  }
-  /* General styling for right-to-left */
-  .rtl-text {
-    direction: rtl; /* Right to left direction */
-    text-align: right; /* Align text to the right */
+  /* Language-specific styling */
+  html.lang-ar {
+    direction: rtl;
+    text-align: right;
   }
 
-  .ltr-text {
-    direction: ltr; /* Left to right direction */
-    text-align: left; /* Align text to the left */
+  html.lang-en {
+    direction: ltr;
+    text-align: left;
   }
 }
 

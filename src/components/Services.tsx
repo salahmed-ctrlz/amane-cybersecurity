@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { useTranslation } from "../hooks/useLanguage"
 import { GlassCard } from "./GlassCard"
@@ -7,20 +5,21 @@ import { ShieldIcon, CloudIcon, CodeIcon, AlertTriangleIcon } from "lucide-react
 import { useThemeContext } from "../hooks/useTheme"
 
 export const Services = () => {
-  const { t } = useTranslation()
-  const { theme } = useThemeContext()
+  const { t, currentLanguage } = useTranslation();  // Access current language
+  const { theme } = useThemeContext();
 
-  const isLightMode = theme === "light"
+  const isLightMode = theme === "light";
+  const isArabic = currentLanguage === "ar";  // Check if language is Arabic
 
   // Icons for each service
-  const serviceIcons = [ShieldIcon, CloudIcon, CodeIcon, AlertTriangleIcon]
+  const serviceIcons = [ShieldIcon, CloudIcon, CodeIcon, AlertTriangleIcon];
 
   // Service-specific subtitles
-  const subtitles = ["COMPREHENSIVE ASSESSMENT", "ELEVATE YOUR DEFENSE", "BUILD WITH SECURITY", "STAY VIGILANT"]
+  const subtitles = ["COMPREHENSIVE ASSESSMENT", "ELEVATE YOUR DEFENSE", "BUILD WITH SECURITY", "STAY VIGILANT"];
 
   return (
-    <section id="services" className="min-h-screen py-20 flex items-center justify-center bg-white/0 dark:bg-black/0">
-      <GlassCard className="w-full p-8 md:p-12 text-center rounded-lg bg-white/0 dark:bg-black/0">
+    <section id="services" className="min-h-screen py-20 flex items-center justify-center bg-white/0 dark:bg-black/0 font-arabic">
+      <GlassCard className="w-full p-8 md:p-12 text-center rounded-lg bg-white/0 dark:bg-black/0 font-arabic">
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -34,14 +33,15 @@ export const Services = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           style={{ color: isLightMode ? "#000000" : "#FFFFFF" }}
-          className="text-2xl md:text-3xl font-semibold mb-12 text-center"
+          className="text-2xl md:text-3xl font-semibold mb-12 text-center font-arabic"
         >
           The Perfect Solution For all Protection
         </motion.h3>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Apply Arabic font class dynamically */}
+        <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 ${isArabic ? 'font-arabic' : ''}`}>
           {t.services.list.map((service, index) => {
-            const Icon = serviceIcons[index]
+            const Icon = serviceIcons[index];
 
             return (
               <motion.div
@@ -118,11 +118,10 @@ export const Services = () => {
                     ))}
                 </ul>
               </motion.div>
-            )
+            );
           })}
         </div>
       </GlassCard>
     </section>
-  )
-}
-
+  );
+};

@@ -99,7 +99,7 @@ export const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-20 font-arabic">
         <GlassCard className="p-8 md:p-12 overflow-hidden relative">
           {/* Background decorative elements */}
           <div className="absolute -top-24 -right-24 w-48 h-48 bg-purple/20 rounded-full blur-6xl" />

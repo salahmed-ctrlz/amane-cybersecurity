@@ -31,12 +31,12 @@ export const Navbar = () => {
         theme === 'dark'
           ? 'bg-black/20 border-white/10'
           : 'bg-white/20 border-black/10'
-      } border-b ${language === 'ar' ? 'rtl' : 'ltr'}`}
+      } border-b ${language === 'ar' ? 'rtl' : 'ltr'}  `}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-arabic">
+        <div className="flex items-center justify-center h-16 font-arabic">
           {/* Desktop Navigation: Text-Only Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 font-arabic">
             {navItems.map(({ key, label }) => {
               const Icon = navIcons[key as keyof typeof navIcons];
               return (
@@ -45,7 +45,7 @@ export const Navbar = () => {
                   href={`#${key}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 font-heading hover:text-purple-400 transition-colors"
+                  className="flex items-center space-x-2 font-heading hover:text-purple-400 transition-colors font-arabic"
                 >
                   <span>{label}</span>
                 </motion.a>
@@ -54,7 +54,7 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile Navigation: Icon-Only Links */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="md:hidden flex items-center space-x-4 font-arabic">
             {navItems.map(({ key }) => {
               const Icon = navIcons[key as keyof typeof navIcons];
               return (
@@ -63,7 +63,7 @@ export const Navbar = () => {
                   href={`#${key}`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="p-2 hover:text-purple-400 transition-colors"
+                  className="p-2 hover:text-purple-400 transition-colors font-arabic"
                 >
                   <Icon className="w-6 h-6" />
                 </motion.a>

@@ -52,8 +52,8 @@ export const About = () => {
   }
 
   return (
-    <section id="about" className="min-h-screen py-20 flex items-center justify-center bg-white/0 dark:bg-black/0">
-      <GlassCard className="w-full p-12 md:p-16 text-center rounded-lg bg-white/0 dark:bg-black/0">
+    <section id="about" className="min-h-screen py-20 flex items-center justify-center bg-white/0 dark:bg-black/0 font-arabic">
+      <GlassCard className="w-full p-12 md:p-16 text-center rounded-lg bg-white/0 dark:bg-black/0vc font-arabic">
         <motion.h2 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
